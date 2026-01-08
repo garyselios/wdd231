@@ -1,4 +1,4 @@
-/* ===== VARIABLES ===== */
+/* VARIABLES */
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -11,7 +11,7 @@
     --border-radius: 8px;
 }
 
-/* ===== BASE STYLES ===== */
+/* BASE STYLES */
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -23,7 +23,7 @@ body {
     flex-direction: column;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -71,7 +71,7 @@ header {
     color: var(--secondary-color);
 }
 
-/* ===== NAVIGATION ===== */
+/* NAVIGATION */
 #main-nav {
     display: none;
     background-color: var(--dark-color);
@@ -117,7 +117,7 @@ header {
     font-weight: 500;
 }
 
-/* ===== MAIN CONTENT ===== */
+/* MAIN CONTENT */
 main {
 
     max-width: 1500px;
@@ -133,7 +133,7 @@ h1 {
     border-bottom: 3px solid var(--secondary-color);
 }
 
-/* ===== CARDS ===== */
+/* CARDS */
 .card {
     background: var(--background-color);
     border-radius: var(--border-radius);
@@ -156,7 +156,7 @@ h1 {
     line-height: 1.8;
 }
 
-/* ===== FILTER BUTTONS ===== */
+/* FILTER BUTTONS */
 .filter-buttons {
     display: flex;
     gap: 0.5rem;
@@ -188,7 +188,7 @@ h1 {
     color: white;
 }
 
-/* ===== COURSE CARDS ===== */
+/* COURSE CARDS */
 .course-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -251,7 +251,7 @@ h1 {
     color: #27ae60;
 }
 
-/* ===== CREDITS CONTAINER ===== */
+/* CREDITS CONTAINER */
 .credits-container {
     text-align: center;
     padding: 1rem;
@@ -267,7 +267,7 @@ h1 {
     font-size: 1.2rem;
 }
 
-/* ===== CHAMBER PROJECT SECTION ===== */
+/* CHAMBER PROJECT SECTION */
 #chamber-project {
     text-align: center;
 }
@@ -289,7 +289,7 @@ h1 {
     transform: translateY(-2px);
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
     background-color: var(--primary-color);
     color: white;
@@ -347,7 +347,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ===== UTILITY CLASSES ===== */
+/* UTILITY CLASSES */
 .hidden {
     display: none !important;
 }
