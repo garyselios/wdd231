@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 Course Home Page - Student Portfolio">
+    <meta name="author" content="Your Name">
+    <title>WDD 231 - Course Home</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/logo.svg" alt="Site Logo" width="50" height="50">
+                <span class="student-name">CX4</span>
+            </div>
+            <button id="menu-button" aria-label="Toggle navigation menu">☰</button>
+        </div>
+
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="final/index.html">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="card" id="about-me">
+            <h2>About Me</h2>
+            <p>Massa Facilisis Per Purus Si Imperdiet Curae Amet. Et Fames Lorem Mi Phasellus Congue Nascetur Enim
+                Consectetur Sociosqu Matorbe Risus. Odio Vehtuila Libero Visi Viverra Augue Commodo Pretium Vivamus At
+                Duis Magna. Quam Fringilla Convallis Ridiculus Malesuada Accumsan Potenti Magnis Volutpat Nulla Ipsum.
+                Dis Maceenas Et Praesent Class Fringilla.</p>
+        </section>
+
+        <section class="card" id="courses">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cse">CSE</button>
+                <button class="filter-btn" data-filter="wdd">WDD</button>
+            </div>
+
+            <div id="course-cards" class="course-grid">
+                <!-- Los cursos se cargarán dinámicamente con JavaScript -->
+            </div>
+
+            <div class="credits-container">
+                <p>The total credits for courses listed above is <span id="total-credits">0</span></p>
+            </div>
+        </section>
+
+        <section class="card" id="chamber-project">
+            <h2>Chamber Project</h2>
+            <p>This section will showcase progress on the Chamber of Commerce project throughout the course.</p>
+            <a href="chamber/index.html" class="project-link">View Chamber Project →</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub" width="30" height="30">
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="30" height="30">
+            </a>
+            <a href="#" target="_blank" aria-label="Website">
+                <img src="images/web.svg" alt="Website" width="30" height="30">
+            </a>
+        </div>
+
+        <div class="footer-info">
+            <p>© <span id="currentyear"></span> • Student Name • Utah, USA</p>
+            <p id="lastModified">Last Modification: </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --card-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.student-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Navigation Styles - Mobile */
+#main-nav {
+    display: none;
+    background-color: var(--dark-color);
+    padding: 1rem 0;
+}
+
+#main-nav.active {
+    display: block;
+}
+
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-nav li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#main-nav a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#main-nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+#main-nav a.active {
+    background-color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* Main Content */
+main {
+    padding: 0 1rem;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--secondary-color);
+    background: white;
+    color: var(--secondary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #f0f8ff;
+}
+
+.filter-btn.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Course Cards */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.course-card {
+    background: var(--light-color);
+    border-left: 4px solid var(--secondary-color);
+    padding: 1rem;
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-3px);
+}
+
+.course-card.completed {
+    border-left-color: #27ae60;
+    background: #e8f6ef;
+}
+
+.course-code {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.course-name {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
+.course-credits {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.credits-container {
+    text-align: center;
+    padding: 1rem;
+    background: var(--light-color);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Project Link */
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: white;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-info {
+    font-size: 0.9rem;
+}
+
+#lastModified {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+}
