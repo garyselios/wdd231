@@ -1,10 +1,11 @@
 /* CSS VARIABLES */
 :root {
-    --primary-color: #0c1d2e;
-    --secondary-color: #3498db;
+    --primary-color: #2c3e50;
+    --secondary-color: #2980b9;
+    --secondary-light: #3498db;
     --accent-color: #e74c3c;
     --light-color: #ecf0f1;
-    --dark-color: #11365a;
+    --dark-color: #2c3e50;
     --text-color: #333333;
     --background-color: #ffffff;
 
@@ -135,7 +136,6 @@ header {
 #main-nav a.active {
     background-color: var(--secondary-color);
     color: var(--white);
-    font-weight: 500;
 }
 
 /* MAIN CONTENT */
@@ -201,6 +201,8 @@ h1 {
 .filter-btn:hover {
     background-color: var(--hover-light);
     transform: translateY(-2px);
+    border-color: var(--secondary-light);
+    color: var(--secondary-light);
 }
 
 .filter-btn.active {
@@ -283,8 +285,9 @@ h1 {
 }
 
 #total-credits {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 1.2rem;
+    font-weight: 700;
 }
 
 /* CHAMBER PROJECT SECTION */

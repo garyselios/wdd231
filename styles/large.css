@@ -252,6 +252,7 @@
 
     #total-credits {
         font-size: 1.3rem;
-        color: var(--secondary-color);
+        color: var(--primary-color);
+        font-weight: 700;
     }
 }
