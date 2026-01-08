@@ -172,14 +172,12 @@
 
     .footer-info {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        gap: 3rem;
-        flex-wrap: wrap;
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 3rem;
+        gap: 0.1rem;
+        /* Space between paragraphs */
     }
+
 
     .footer-info p {
         margin: 0;
