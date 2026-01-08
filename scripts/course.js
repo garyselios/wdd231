@@ -1,13 +1,13 @@
-// Course data and filtering functionality
+
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Course data array (from assignment)
     const courses = [
-        { code: "CSE 110", name: "Programming Building Blocks", credits: 3, prefix: "cse", completed: false },
-        { code: "WDD 130", name: "Web Fundamentals", credits: 3, prefix: "wdd", completed: true },
-        { code: "CSE 111", name: "Programming with Functions", credits: 3, prefix: "cse", completed: false },
-        { code: "CSE 210", name: "Programming with Classes", credits: 3, prefix: "cse", completed: false },
-        { code: "WDD 131", name: "Dynamic Web Fundamentals", credits: 3, prefix: "wdd", completed: true },
-        { code: "WDD 231", name: "Frontend Web Development I", credits: 3, prefix: "wdd", completed: false }
+        { code: "CSE 110", name: "Programming Building Blocks", credits: 2, prefix: "cse", completed: true },
+        { code: "WDD 130", name: "Web Fundamentals", credits: 2, prefix: "wdd", completed: true },
+        { code: "CSE 111", name: "Programming with Functions", credits: 2, prefix: "cse", completed: true },
+        { code: "CSE 210", name: "Programming with Classes", credits: 2, prefix: "cse", completed: false },
+        { code: "WDD 131", name: "Dynamic Web Fundamentals", credits: 2, prefix: "wdd", completed: true },
+        { code: "WDD 231", name: "Frontend Web Development I", credits: 2, prefix: "wdd", completed: false }
     ];
 
     const courseContainer = document.getElementById('course-cards');
