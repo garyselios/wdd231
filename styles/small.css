@@ -1,11 +1,11 @@
 /* CSS VARIABLES */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #2980b9;
-    --secondary-light: #3498db;
+    --primary-color: #0f1f30;
+    --secondary-color: #0f4c75;
+    --secondary-light: #0f4c75;
     --accent-color: #e74c3c;
     --light-color: #ecf0f1;
-    --dark-color: #2c3e50;
+    --dark-color: #084c90;
     --text-color: #333333;
     --background-color: #ffffff;
 
