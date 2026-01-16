@@ -31,7 +31,7 @@ function updateDates() {
             minute: '2-digit',
             second: '2-digit'
         };
-        lastModifiedElement.textContent = 'Última actualización: ' + now.toLocaleDateString('es-ES', options);
+        lastModifiedElement.textContent = 'Last Modification: ' + now.toLocaleDateString('es-ES', options);
     }
 }
 
