@@ -1,5 +1,5 @@
 
-// scripts/spotlights.js - Spotlights module
+
 import { formatPhoneNumber } from './main.js';
 
 const MEMBERS_JSON_URL = 'data/members.json';

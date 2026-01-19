@@ -1,21 +1,16 @@
 
-// ==============================
-// CONFIGURATION
-// ==============================
-const API_KEY = '15b6e195691a7259316c6baf1613af7e'; // ⚠️ WARNING: Don't publish this!
+const API_KEY = '15b6e195691a7259316c6baf1613af7e';
 const LAT = -34.9011;
 const LON = -56.1645;
-const UNITS = 'imperial'; // Changed to 'imperial' for Fahrenheit (matches your HTML)
+const UNITS = 'imperial'; // Changed to 'imperial' for Fahrenheit
 const LANG = 'en';
 
 const API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&appid=${API_KEY}&units=${UNITS}&lang=${LANG}`;
 
-// ==============================
-// HTML ELEMENTS FROM YOUR HTML
-// ==============================
+
 const elements = {
     // Current weather elements
-    cityName: document.querySelector('h3'), // The <h3> in .current-weather
+    cityName: document.querySelector('h3'),
     weatherIcon: document.getElementById('weatherIcon'),
     currentTemp: document.getElementById('currentTemp'),
     weatherDesc: document.getElementById('weatherDesc'),
@@ -29,9 +24,9 @@ const elements = {
     forecastCardTemplate: null
 };
 
-// ==============================
+
 // WEATHER ICON MAPPING
-// ==============================
+
 const weatherIcons = {
     '01d': 'https://openweathermap.org/img/wn/01d@2x.png', // clear sky (day)
     '01n': 'https://openweathermap.org/img/wn/01n@2x.png', // clear sky (night)
@@ -53,9 +48,9 @@ const weatherIcons = {
     '50n': 'https://openweathermap.org/img/wn/50n@2x.png'
 };
 
-// ==============================
+
 // MAIN FUNCTION TO FETCH WEATHER DATA
-// ==============================
+
 async function fetchWeatherData() {
     try {
         console.log('Fetching weather data from OpenWeatherMap...');
@@ -77,9 +72,9 @@ async function fetchWeatherData() {
     }
 }
 
-// ==============================
+
 // UPDATE CURRENT WEATHER DISPLAY
-// ==============================
+
 function updateCurrentWeather(data) {
     if (!data.list || data.list.length === 0) {
         console.error('No weather data available');
@@ -131,9 +126,9 @@ function updateCurrentWeather(data) {
     }
 }
 
-// ==============================
+
 // UPDATE 3-DAY FORECAST DISPLAY
-// ==============================
+
 function updateForecast(data) {
     if (!elements.forecastContainer || !data.list) {
         console.error('Forecast container not found or no forecast data');
@@ -176,9 +171,9 @@ function updateForecast(data) {
     console.log('Forecast updated for 3 days');
 }
 
-// ==============================
+
 // HELPER FUNCTIONS
-// ==============================
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -206,9 +201,9 @@ function showErrorMessage(message) {
     }
 }
 
-// ==============================
+
 // INITIALIZE WEATHER APP
-// ==============================
+
 function initWeatherApp() {
     console.log('Initializing weather application...');
 
@@ -227,16 +222,11 @@ function initWeatherApp() {
     console.log('Weather app initialized successfully');
 }
 
-// ==============================
+
 // START THE APP WHEN DOCUMENT IS READY
-// ==============================
+
 document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM loaded, starting weather app...');
     initWeatherApp();
 });
 
-// ==============================
-// EXPORT FOR MODULE USAGE (optional)
-// ==============================
-// If using ES6 modules, uncomment:
-// export { fetchWeatherData, initWeatherApp };

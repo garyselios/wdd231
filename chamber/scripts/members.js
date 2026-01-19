@@ -1,14 +1,12 @@
 
-// ==============================
-// CONFIGURATION
-// ==============================
+
 const MEMBERS_JSON_URL = 'data/members.json'; // Path to your JSON file
 const SPOTLIGHTS_CONTAINER_ID = 'spotlightsContainer'; // Matches your HTML ID
 const NUM_SPOTLIGHTS = 2; // You have 2 spotlight cards in your HTML
 
-// ==============================
+
 // MAIN FUNCTION - LOAD AND DISPLAY SPOTLIGHTS
-// ==============================
+
 async function loadMemberSpotlights() {
     try {
         console.log('Loading member spotlights...');
@@ -70,18 +68,18 @@ async function loadMemberSpotlights() {
     }
 }
 
-// ==============================
+
 // GET RANDOM MEMBERS FROM ARRAY
-// ==============================
+
 function getRandomMembers(members, count) {
     // Create a copy to avoid modifying the original array
     const shuffled = [...members].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
 }
 
-// ==============================
+
 // DISPLAY SPOTLIGHTS IN CONTAINER
-// ==============================
+
 function displaySpotlights(members, container) {
     // Clear container
     container.innerHTML = '';
@@ -95,9 +93,9 @@ function displaySpotlights(members, container) {
     console.log(`Displayed ${members.length} spotlight members`);
 }
 
-// ==============================
+
 // CREATE SPOTLIGHT CARD ELEMENT
-// ==============================
+
 function createSpotlightCard(member) {
     const card = document.createElement('div');
     card.className = 'spotlight-card';
@@ -133,9 +131,9 @@ function createSpotlightCard(member) {
     return card;
 }
 
-// ==============================
+
 // GET MEMBERSHIP BADGE COLOR
-// ==============================
+
 function getMembershipColor(membershipName) {
     const colors = {
         'Gold': '#FFD700',
@@ -146,9 +144,9 @@ function getMembershipColor(membershipName) {
     return colors[membershipName] || '#3498db';
 }
 
-// ==============================
+
 // SHOW ERROR MESSAGE
-// ==============================
+
 function showSpotlightError() {
     const container = document.getElementById(SPOTLIGHTS_CONTAINER_ID);
 
@@ -175,9 +173,9 @@ function showSpotlightError() {
     `;
 }
 
-// ==============================
+
 // INITIALIZE SPOTLIGHTS
-// ==============================
+
 function initSpotlights() {
     console.log('Initializing member spotlights...');
 
@@ -191,9 +189,9 @@ function initSpotlights() {
     setInterval(loadMemberSpotlights, 60 * 60 * 1000);
 }
 
-// ==============================
+
 // CSS FOR SKELETON LOADING (inline if needed)
-// ==============================
+
 function addSkeletonStyles() {
     const style = document.createElement('style');
     style.textContent = `
@@ -346,9 +344,9 @@ function addSkeletonStyles() {
     document.head.appendChild(style);
 }
 
-// ==============================
+
 // START THE APPLICATION
-// ==============================
+
 // Add skeleton styles
 addSkeletonStyles();
 

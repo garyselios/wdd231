@@ -1,5 +1,5 @@
 
-// main.js - Updated version with home page functionality
+
 document.addEventListener('DOMContentLoaded', function () {
     // Update copyright year and last modified date
     updateDates();
@@ -103,7 +103,6 @@ function initMeetingBanner() {
     if (closeBtn) {
         closeBtn.addEventListener('click', function () {
             banner.style.display = 'none';
-            // Store closure with today's date
             localStorage.setItem('bannerClosed', todayDate);
         });
     }
@@ -111,8 +110,7 @@ function initMeetingBanner() {
 
 // ===== LAZY LOADING FOR IMAGES =====
 function setupLazyLoading() {
-    // This will be handled by the browser's native lazy loading
-    // Just ensure images have loading="lazy" attribute
+
     const images = document.querySelectorAll('img[data-src]');
 
     const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -149,7 +147,7 @@ function setupSmoothScrolling() {
     });
 }
 
-// ===== EXISTING FUNCTIONS (keep these unchanged) =====
+
 // Function to update dates in footer
 function updateDates() {
     // Current year

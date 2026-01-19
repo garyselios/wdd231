@@ -1,5 +1,5 @@
 
-// banner.js - Meeting banner logic
+
 
 const BANNER = document.getElementById('meetingBanner');
 const CLOSE_BTN = document.getElementById('closeBanner');
