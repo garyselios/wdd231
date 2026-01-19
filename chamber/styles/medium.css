@@ -1,0 +1,219 @@
+/* ===== MEDIUM BREAKPOINT (768px and up) ===== */
+@media (min-width: 768px) {
+
+    /* Header Adjustments */
+    .header-container {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    /* Hide hamburger, show full navigation */
+    .hamburger {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .nav-list li {
+        width: auto;
+    }
+
+    .nav-list a {
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-bottom: none;
+        border-radius: var(--border-radius);
+    }
+
+    .date-display {
+        order: unset;
+        width: auto;
+        margin-top: 0;
+        padding: var(--spacing-sm) var(--spacing-md);
+        margin-left: auto;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 450px;
+    }
+
+    .hero-content {
+        padding: var(--spacing-xl);
+        max-width: 600px;
+        left: 10%;
+        transform: translateY(-50%);
+        text-align: left;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+
+    /* Events Grid */
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    /* Weather Section */
+    .weather-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-xl);
+        align-items: start;
+    }
+
+    .current-weather {
+        margin-bottom: 0;
+    }
+
+    .forecast-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    /* Spotlights */
+    .spotlights-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    /* CTA Buttons */
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cta-button {
+        width: auto;
+        min-width: 200px;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 2fr 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .footer-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* Weather Info Layout */
+    .weather-info {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .temp-details {
+        text-align: left;
+    }
+
+    /* Event Cards */
+    .event-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Spotlight Cards */
+    .spotlight-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Navigation improvements */
+    .main-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--spacing-sm) var(--spacing-lg);
+    }
+
+    .nav-list {
+        flex: 1;
+        justify-content: center;
+    }
+
+    /* Logo adjustments */
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .logo-text h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Social media */
+    .social-media {
+        gap: var(--spacing-md);
+    }
+
+    .social-media a {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Meeting banner */
+    .meeting-banner p {
+        font-size: 1rem;
+    }
+
+    /* Section spacing */
+    section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    section h2 {
+        font-size: 2.2rem;
+        margin-bottom: var(--spacing-xl);
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+
+    .cta-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+}
+
+/* ===== TABLET LANDSCAPE (900px and up) ===== */
+@media (min-width: 900px) {
+    .events-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .spotlights-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-content {
+        max-width: 700px;
+        padding: var(--spacing-xl) var(--spacing-xxl);
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
