@@ -174,7 +174,7 @@ header {
 #main-nav a:hover,
 #main-nav a.active {
     background-color: var(--accent-color);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 /* ===== MEETING BANNER ===== */
@@ -290,8 +290,8 @@ header {
 /* CTA Button */
 .cta-button {
     display: inline-block;
-    background-color: var(--gold-color);
-    color: white;
+    background-color: #f6ad55;
+    color: var(--primary-color);
     padding: var(--spacing-sm) var(--spacing-xl);
     border-radius: var(--border-radius);
     font-weight: 600;
@@ -488,7 +488,7 @@ section h2::after {
     text-align: center;
     margin-top: var(--spacing-md);
     font-size: 0.9rem;
-    color: var(--silver-color);
+    color: #718096;
     font-style: italic;
 }
 
@@ -752,7 +752,7 @@ section h2::after {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, #1a365d, #2c5282) !important;
     color: white;
     padding: var(--spacing-xl) var(--spacing-md);
     border-radius: var(--border-radius);
