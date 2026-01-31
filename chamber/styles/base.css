@@ -121,17 +121,7 @@ header {
     border-radius: var(--border-radius);
 }
 
-/* Hamburger Menu */
-#menu-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.8rem;
-    cursor: pointer;
-    padding: var(--spacing-xs);
-    display: none;
-}
-
+/* Hamburger Menu Button */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -143,6 +133,7 @@ header {
     cursor: pointer;
     padding: 0;
     margin: 0 var(--spacing-md);
+    z-index: 1000;
 }
 
 .hamburger .bar {
@@ -153,7 +144,25 @@ header {
     transition: all 0.3s ease;
 }
 
+/* Hamburger animation when active */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+}
+
 /* ===== NAVIGATION ===== */
+#main-nav {
+    display: flex;
+    align-items: center;
+}
+
 #main-nav ul {
     display: flex;
     list-style: none;
@@ -937,7 +946,7 @@ footer .contact-info {
         flex-wrap: wrap;
     }
 
-    /* Show hamburger, hide date display in mobile */
+    /* Show hamburger in mobile */
     .hamburger {
         display: flex;
         order: 2;
@@ -947,24 +956,27 @@ footer .contact-info {
         display: none;
     }
 
-    #menu-button {
-        display: block;
-    }
-
+    /* Mobile navigation */
     #main-nav {
         display: none;
         width: 100%;
         order: 3;
-        margin-top: var(--spacing-sm);
+        margin-top: var(--spacing-md);
     }
 
     #main-nav.active {
-        display: block;
+        display: flex;
+        animation: slideDown 0.3s ease-out;
     }
 
     #main-nav ul {
         flex-direction: column;
+        width: 100%;
         gap: 0;
+        background-color: var(--header-bg);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
     }
 
     #main-nav li {
@@ -973,13 +985,13 @@ footer .contact-info {
 
     #main-nav a {
         display: block;
-        padding: var(--spacing-sm);
+        padding: var(--spacing-md);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
     }
 
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
+    #main-nav a:hover {
+        background-color: var(--accent-color);
     }
 
     /* Mobile adjustments for home page */
@@ -1041,6 +1053,12 @@ footer .contact-info {
         gap: var(--spacing-sm);
         align-items: flex-start;
     }
+
+    /* Footer mobile adjustments */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
 }
 
 /* Desktop adjustments */
@@ -1071,4 +1089,436 @@ footer .contact-info {
     margin: 0 auto;
     padding: var(--spacing-lg) var(--spacing-md);
     width: 100%;
+}
+
+/* ===== JOIN PAGE STYLES ===== */
+.join-main {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.join-main h1 {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-xl);
+    font-size: 1.1rem;
+}
+
+.join-container {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+/* Form Styles */
+.form-section fieldset {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    background: var(--card-bg);
+}
+
+.form-section legend {
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0 var(--spacing-sm);
+    font-size: 1.2rem;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.form-section label>*:not(span) {
+    display: block;
+    width: 100%;
+    margin-top: var(--spacing-xs);
+}
+
+.form-section input,
+.form-section textarea {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.1);
+}
+
+.form-section small {
+    display: block;
+    margin-top: var(--spacing-xs);
+    color: var(--silver-color);
+    font-size: 0.85rem;
+}
+
+/* Membership Options */
+.membership-options {
+    display: grid;
+    gap: var(--spacing-sm);
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-label:hover {
+    background-color: var(--light-color);
+    border-color: var(--secondary-color);
+}
+
+.option-label input[type="radio"] {
+    margin-right: var(--spacing-sm);
+    width: auto;
+}
+
+.option-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-right: var(--spacing-xs);
+}
+
+.option-subtitle {
+    color: var(--silver-color);
+    font-size: 0.9rem;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: var(--spacing-md);
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Membership Cards */
+.cards-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-color);
+}
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    counter-reset: card-counter;
+}
+
+.membership-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.membership-card.animate-in {
+    animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    padding: var(--spacing-md);
+    color: white;
+}
+
+.np-card .card-header {
+    background: linear-gradient(135deg, var(--success-color), #2d7a52);
+}
+
+.bronze-card .card-header {
+    background: linear-gradient(135deg, var(--bronze-color), #9c6d1a);
+}
+
+.silver-card .card-header {
+    background: linear-gradient(135deg, var(--silver-color), #718096);
+}
+
+.gold-card .card-header {
+    background: linear-gradient(135deg, var(--gold-color), #b38f1f);
+}
+
+.card-header h3 {
+    margin: 0 0 var(--spacing-xs) 0;
+    font-size: 1.3rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.card-body {
+    padding: var(--spacing-lg);
+}
+
+.card-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-lg) 0;
+}
+
+.card-body li {
+    padding: var(--spacing-xs) 0;
+    color: var(--dark-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.card-body li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.info-btn {
+    display: block;
+    width: 100%;
+    padding: var(--spacing-sm);
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Modals */
+.membership-modal {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: var(--shadow-lg);
+}
+
+.membership-modal::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    padding: var(--spacing-xl);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.modal-content ul {
+    margin: var(--spacing-lg) 0;
+    padding-left: var(--spacing-md);
+}
+
+.modal-content li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.close-modal {
+    display: block;
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.close-modal:hover {
+    background-color: var(--primary-color);
+}
+
+/* Thank You Page */
+.thankyou-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+    text-align: center;
+}
+
+.confirmation-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    margin: var(--spacing-xl) 0;
+}
+
+.confirmation-details {
+    text-align: left;
+    background: var(--light-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-lg) 0;
+}
+
+.confirmation-details p {
+    margin: var(--spacing-md) 0;
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.confirmation-details p:last-child {
+    border-bottom: none;
+}
+
+.next-steps {
+    font-size: 1.1rem;
+    color: var(--success-color);
+    font-weight: 500;
+    margin: var(--spacing-lg) 0;
+}
+
+/* Responsive Design for Join Page */
+@media (min-width: 769px) {
+    .join-container {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .cards-section {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .membership-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section fieldset {
+        padding: var(--spacing-md);
+    }
+}
+
+/* ===== MODAL CENTERING FIX ===== */
+.membership-modal {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: var(--shadow-lg);
+
+    /* Centering fixes */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.membership-modal::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    padding: var(--spacing-xl);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Estilos para el botón de cerrar */
+.modal-content h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-modal {
+    display: inline-block;
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.close-modal:hover {
+    background-color: var(--primary-color);
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 768px) {
+    .membership-modal {
+        width: 95%;
+        max-width: 95%;
+        max-height: 90vh;
+    }
+
+    .modal-content {
+        padding: var(--spacing-md);
+        max-height: 85vh;
+    }
 }

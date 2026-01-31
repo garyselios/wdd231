@@ -1,0 +1,290 @@
+/* ===== THANK YOU PAGE STYLES ===== */
+.thankyou-main {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.thankyou-container {
+    text-align: center;
+}
+
+.success-icon {
+    margin-bottom: var(--spacing-lg);
+    animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.thankyou-main h1 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+}
+
+.thankyou-message {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+    line-height: 1.6;
+    font-family: var(--font-body);
+}
+
+.confirmation-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xl);
+    margin: var(--spacing-xl) 0;
+    box-shadow: var(--shadow-md);
+    text-align: left;
+    border-top: 4px solid var(--success-color);
+}
+
+.confirmation-card h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: var(--font-heading);
+}
+
+.confirmation-details {
+    background: var(--light-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-lg);
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-family: var(--font-body);
+}
+
+.detail-value {
+    color: var(--dark-color);
+    text-align: right;
+    font-family: var(--font-body);
+}
+
+.application-id {
+    text-align: center;
+    padding: var(--spacing-md);
+    background: linear-gradient(135deg, var(--light-color), #e2e8f0);
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+}
+
+.application-id span {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.next-steps {
+    margin: var(--spacing-xl) 0;
+}
+
+.next-steps h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.step {
+    background: var(--card-bg);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-heading);
+}
+
+.step h4 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+}
+
+.step p {
+    color: var(--dark-color);
+    line-height: 1.5;
+    font-family: var(--font-body);
+}
+
+.contact-reminder {
+    background: linear-gradient(135deg, var(--light-color), #e2e8f0);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-xl) 0;
+}
+
+.contact-reminder h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+}
+
+.contact-info {
+    margin-top: var(--spacing-lg);
+}
+
+.contact-info p {
+    margin: var(--spacing-sm) 0;
+    color: var(--dark-color);
+    font-family: var(--font-body);
+}
+
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-xl);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+}
+
+.cta-button.primary {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 2px solid var(--secondary-color);
+}
+
+.cta-button.primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .thankyou-main h1 {
+        font-size: 2rem;
+    }
+
+    .thankyou-message {
+        font-size: 1.1rem;
+    }
+
+    .detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+
+    .detail-value {
+        text-align: left;
+        margin-top: var(--spacing-xs);
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .confirmation-card {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .thankyou-main h1 {
+        font-size: 1.8rem;
+    }
+
+    .thankyou-message {
+        font-size: 1rem;
+    }
+
+    .confirmation-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .step {
+        padding: var(--spacing-md);
+    }
+}
