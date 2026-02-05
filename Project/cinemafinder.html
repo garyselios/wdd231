@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Site Plan - CinemaFinder</title>
+    <link rel="stylesheet" href="styles/cinemafinder.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Website Site Plan</h1>
+        <h2>CinemaFinder - Movie & TV Series Search Engine</h2>
+    </header>
+
+    <main>
+        <!-- 1. Site Name -->
+        <section class="section" id="site-name">
+            <h2>1. Site Name</h2>
+            <p><strong>CinemaFinder</strong></p>
+            <p>This name was chosen because it clearly describes the site's purpose:
+                helping users find and discover movies and TV series. "Cinema" represents
+                the film industry, and "Finder" indicates the search and discovery functionality.</p>
+        </section>
+
+        <!-- 2. Site Purpose -->
+        <section class="section" id="site-purpose">
+            <h2>2. Site Purpose</h2>
+            <p>The CinemaFinder website provides an interactive platform for users to:</p>
+            <ul>
+                <li>Search and discover movies and TV series using real-time data from TMDB API</li>
+                <li>Browse new releases, popular content, and personalized recommendations</li>
+                <li>Filter content by genre, release year, rating, and other criteria</li>
+                <li>Save favorite movies to a personal watchlist using Local Storage</li>
+                <li>Get detailed information about films</li>
+            </ul>
+        </section>
+
+        <!-- 3. Scenarios -->
+        <section class="section" id="scenarios">
+            <h2>3. Scenarios</h2>
+            <p>Target audience questions that will drive website content:</p>
+            <ul>
+                <li>"What are the best action movies released in the last year?"</li>
+                <li>"How can I find movies similar to my favorites?"</li>
+                <li>"Where can I save movies to watch later?"</li>
+                <li>"What new TV series are coming out this month?"</li>
+            </ul>
+        </section>
+
+        <!-- 4. Color Scheme -->
+        <section class="section" id="color-scheme">
+            <h2>4. Color Scheme</h2>
+            <p>The color scheme is inspired by cinema and dark mode viewing experiences:</p>
+
+            <div class="color-grid">
+                <div class="color-box primary-color">
+                    <div class="color-sample"></div>
+                    <p><strong>Primary Color</strong></p>
+                    <p>#0d253f (Dark Blue)</p>
+                    <p>Used for: Headers, navigation bar, footer</p>
+                </div>
+
+                <div class="color-box secondary-color">
+                    <div class="color-sample"></div>
+                    <p><strong>Secondary Color</strong></p>
+                    <p>#01b4e4 (Light Blue)</p>
+                    <p>Used for: Buttons, links, highlights, accents</p>
+                </div>
+
+                <div class="color-box accent-color">
+                    <div class="color-sample"></div>
+                    <p><strong>Accent Color</strong></p>
+                    <p>#90cea1 (Soft Green)</p>
+                    <p>Used for: Special elements, success messages, ratings</p>
+                </div>
+
+                <div class="color-box background-color">
+                    <div class="color-sample"></div>
+                    <p><strong>Background</strong></p>
+                    <p>#121212 (Dark Gray)</p>
+                    <p>Used for: Main background, card backgrounds</p>
+                </div>
+
+                <div class="color-box text-color">
+                    <div class="color-sample"></div>
+                    <p><strong>Text Color</strong></p>
+                    <p>#ffffff (White)</p>
+                    <p>Used for: Primary text on dark backgrounds</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Typography -->
+        <section class="section" id="typography">
+            <h2>5. Typography</h2>
+
+            <div class="typography-example">
+                <div class="font-display">
+                    <h3 class="font-heading">Oswald</h3>
+                    <p class="font-details">Used for: Headings (H1, H2, H3)</p>
+                    <p class="font-sample heading-sample">The quick brown fox jumps over the lazy dog</p>
+                </div>
+
+                <div class="font-display">
+                    <h3 class="font-heading" style="font-family: 'Roboto';">Roboto</h3>
+                    <p class="font-details">Used for: Body text, paragraphs, buttons</p>
+                    <p class="font-sample body-sample">The quick brown fox jumps over the lazy dog. 1234567890</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Wireframe -->
+        <section class="section" id="wireframe">
+            <h2>6. Wireframe</h2>
+
+            <div class="wireframe-container">
+                <div class="wireframe-box">
+                    <h3>Mobile View (320px+)</h3>
+                    <div class="wireframe-mobile">
+                        <div class="wireframe-element header">Header with Logo & Hamburger Menu</div>
+                        <div class="wireframe-element hero">Hero Section: Featured Movie</div>
+                        <div class="wireframe-element trending">Trending Movies (Grid 2xN)</div>
+                        <div class="wireframe-element search">Search Bar</div>
+                        <div class="wireframe-element new-releases">New Releases (Vertical List)</div>
+                        <div class="wireframe-element footer">Footer with Links</div>
+                    </div>
+                </div>
+
+                <div class="wireframe-box">
+                    <h3>Desktop View (1024px+)</h3>
+                    <div class="wireframe-desktop">
+                        <div class="wireframe-element header">Full Navigation Bar</div>
+                        <div class="wireframe-row">
+                            <div class="wireframe-element hero-wide">Hero + Featured Content</div>
+                            <div class="wireframe-element sidebar">Sidebar: Filters & Categories</div>
+                        </div>
+                        <div class="wireframe-element content-grid">Movie Grid (4xN)</div>
+                        <div class="wireframe-element footer-wide">Extended Footer</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Website Site Plan | CinemaFinder Project | WDD231</p>
+    </footer>
+
+    <script src="scripts/site-plan.js" defer></script>
+</body>
+
+</html>

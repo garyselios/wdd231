@@ -275,3 +275,58 @@
         padding: var(--spacing-xxl) var(--spacing-xxl);
     }
 }
+
+/* large.css - Media query for large screens (1025px+) */
+
+@media (min-width: 1025px) {
+
+    /* Gallery Layout for Large Screens - Complex grid areas */
+    .gallery-container {
+        grid-template-areas:
+            "attraction1 attraction2 attraction3"
+            "attraction4 attraction5 attraction6"
+            "attraction7 attraction8 .";
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    /* Assign each card to a specific grid area */
+    .attraction-card:nth-child(1) {
+        grid-area: attraction1;
+    }
+
+    .attraction-card:nth-child(2) {
+        grid-area: attraction2;
+    }
+
+    .attraction-card:nth-child(3) {
+        grid-area: attraction3;
+    }
+
+    .attraction-card:nth-child(4) {
+        grid-area: attraction4;
+    }
+
+    .attraction-card:nth-child(5) {
+        grid-area: attraction5;
+    }
+
+    .attraction-card:nth-child(6) {
+        grid-area: attraction6;
+    }
+
+    .attraction-card:nth-child(7) {
+        grid-area: attraction7;
+    }
+
+    .attraction-card:nth-child(8) {
+        grid-area: attraction8;
+    }
+
+    /* Enhanced hover effects for large screens */
+    .attraction-card:hover .attraction-image {
+        filter: brightness(1.1) saturate(1.2) contrast(1.05);
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+}

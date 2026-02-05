@@ -217,3 +217,35 @@
         grid-template-columns: 2fr 1fr 1fr;
     }
 }
+
+/* medium.css - Media query for medium screens (641px - 1024px) */
+
+@media (min-width: 641px) {
+    /* Gallery Layout for Medium Screens - 2 columns */
+    .gallery-container {
+        grid-template-areas:
+            "attraction1 attraction2"
+            "attraction3 attraction4"
+            "attraction5 attraction6"
+            "attraction7 attraction8";
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    /* Image hover effects for medium and larger screens */
+    .attraction-image {
+        filter: brightness(0.95);
+    }
+    
+    .attraction-card:hover .attraction-image {
+        filter: brightness(1.05) saturate(1.1);
+        transform: scale(1.03);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Demographics for medium screens */
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing-lg);
+    }
+}
