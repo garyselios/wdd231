@@ -1813,3 +1813,14 @@ footer .contact-info {
     color: var(--silver-color);
     font-size: 0.9rem;
 }
+
+@media (min-width: 768px) {
+    .attraction-image {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .attraction-image:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+}

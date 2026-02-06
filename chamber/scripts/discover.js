@@ -1,9 +1,33 @@
-// Import attraction data
-import { attractions } from './attraction.js';
+
+let attractions = [];
 
 // DOM Elements
 const galleryContainer = document.getElementById('galleryContainer');
 const visitMessage = document.getElementById('visitMessage');
+
+// Function to load attractions from JSON
+async function loadAttractions() {
+    try {
+        const response = await fetch('./data/attractions.json');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        attractions = await response.json();
+
+        // Create cards after data is loaded
+        createAttractionCards();
+
+    } catch (error) {
+        console.error('Error loading attractions data:', error);
+        galleryContainer.innerHTML = `
+            <div class="error-message">
+                <p>Sorry, we couldn't load the attractions data. Please try again later.</p>
+            </div>
+        `;
+    }
+}
 
 // Function to format date
 function formatDate(date) {
@@ -13,7 +37,7 @@ function formatDate(date) {
         month: 'long',
         day: 'numeric'
     };
-    return date.toLocaleDateString('en-EN', options);
+    return date.toLocaleDateString('en-US', options);
 }
 
 // Function to handle last visit message
@@ -22,16 +46,12 @@ function handleVisitMessage() {
     const currentDate = new Date();
     const currentTime = currentDate.getTime();
 
-    // Get last visit date from localStorage
     const lastVisitTime = localStorage.getItem(LAST_VISIT_KEY);
-
     let message = '';
 
     if (!lastVisitTime) {
-        // First visit
         message = 'Welcome! Let us know if you have any questions.';
     } else {
-        // Calculate difference in days
         const lastVisitDate = new Date(parseInt(lastVisitTime));
         const timeDifference = currentTime - lastVisitDate.getTime();
         const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
@@ -45,18 +65,19 @@ function handleVisitMessage() {
         }
     }
 
-    // Display message
     visitMessage.innerHTML = `
         <p>${message}</p>
         <small>Current date: ${formatDate(currentDate)}</small>
     `;
 
-    // Save current date as last visit
     localStorage.setItem(LAST_VISIT_KEY, currentTime.toString());
 }
 
 // Function to create attraction cards
 function createAttractionCards() {
+    // Clear container first
+    galleryContainer.innerHTML = '';
+
     attractions.forEach(attraction => {
         const card = document.createElement('article');
         card.className = 'attraction-card';
@@ -93,7 +114,6 @@ function createAttractionCards() {
             const attractionId = this.getAttribute('data-id');
             const attraction = attractions.find(a => a.id === parseInt(attractionId));
 
-            // Here you could open a modal or redirect to a detailed page
             alert(`More information about: ${attraction.name}\n\n${attraction.description}\n\nAddress: ${attraction.address}`);
         });
     });
@@ -110,8 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle visit message
     handleVisitMessage();
 
-    // Create attraction cards
-    createAttractionCards();
+    // Load attractions from JSON and create cards
+    loadAttractions();
 
     // Handle hamburger menu
     const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -129,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBanner = document.getElementById('closeBanner');
 
     if (meetingBanner && closeBanner) {
-        // Only show banner if not closed in localStorage
         const bannerClosed = localStorage.getItem('meetingBannerClosed');
         if (!bannerClosed) {
             meetingBanner.style.display = 'block';
