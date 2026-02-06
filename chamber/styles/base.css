@@ -952,6 +952,18 @@ footer .contact-info {
     width: 100%;
 }
 
+.discover-main h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: #0d253f;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    line-height: 1.1;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: -0.5px;
+}
+
 /* ===== JOIN PAGE STYLES ===== */
 .join-main {
     max-width: var(--container-width);
