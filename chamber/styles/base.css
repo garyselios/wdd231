@@ -1602,10 +1602,6 @@ footer .contact-info {
     display: grid;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-xl);
-}
-
-/* Mobile View (default) - 1 column */
-.gallery-container {
     grid-template-areas:
         "attraction1"
         "attraction2"
