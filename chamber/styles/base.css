@@ -1571,8 +1571,8 @@ footer .contact-info {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background-color: var(--gold-color);
     border-radius: 2px;
+    background-color: var(--primary-color);
 }
 
 .discover-main .subtitle {
@@ -1825,13 +1825,7 @@ footer .contact-info {
     }
 }
 
-
 .demographics h2::after {
     content: none !important;
     display: none !important;
-}
-
-.discover-main h1::after {
-    background-color: var(--primary-color);
-
 }
