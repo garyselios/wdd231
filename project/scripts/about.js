@@ -48,7 +48,7 @@ function displayFormSubmission(data, resultContainer) {
     const country = data.country || 'Not selected';
     const interests = data.interests || 'Not selected';
 
-    resultContainer.style.display = 'block';
+    resultContainer.classList.add('show');
     resultContainer.innerHTML = `
         <h3>✅ Subscription Successful!</h3>
         <p>Thank you for subscribing to our newsletter, <strong>${fullName}</strong>!</p>
@@ -62,7 +62,7 @@ function displayFormSubmission(data, resultContainer) {
 
     // Auto-hide after 10 seconds
     setTimeout(() => {
-        resultContainer.style.display = 'none';
+        resultContainer.classList.remove('show');
     }, 10000);
 }
 
