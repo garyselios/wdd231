@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaFinder - About & Newsletter</title>
+    <meta name="description" content="Learn about CinemaFinder and subscribe to our newsletter.">
+    <meta name="author" content="Gary Selios">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="CinemaFinder - About & Newsletter">
+    <meta property="og:description" content="Discover the story behind CinemaFinder and join our newsletter.">
+    <meta property="og:image" content="https://garyselios.github.io/wdd231/final/images/logo.jpg">
+    <meta property="og:url" content="https://garyselios.github.io/wdd231/final/about.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CinemaFinder - About">
+    <meta name="twitter:description" content="Movie discovery powered by TMDB.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/logo.svg" alt="CinemaFinder Logo" width="50" height="50">
+                <h1>CinemaFinder</h1>
+            </div>
+
+            <button id="hamburgerBtn" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>About CinemaFinder</h1>
+
+        <!-- Our Story - ONLY THIS REMAINS -->
+        <section class="about-section">
+            <h2>Our Story</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>CinemaFinder was created as a final project for WDD231 - Web Frontend Development. The goal was
+                        to build a dynamic, responsive web application that integrates real-time data from an external
+                        API while demonstrating proficiency in HTML, CSS, and JavaScript.</p>
+
+                    <p>The website uses <strong>The Movie Database (TMDB) API</strong> to fetch up-to-date information
+                        about movies, including popular titles, trending films, and detailed metadata. Users can search
+                        for movies, filter results by genre, year, and rating, and save their favorites using browser
+                        localStorage.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/logo.svg" alt="CinemaFinder Logo" width="200" height="200">
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Form -->
+        <section class="newsletter-section">
+            <h2>Join Our Newsletter</h2>
+            <div class="newsletter-content">
+                <p>Stay updated with new movie releases, weekly recommendations, and exclusive content.</p>
+
+                <form id="newsletterForm" class="newsletter-form" action="about.html" method="get">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required
+                            autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required
+                            autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="">Select your country</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="USA">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interests">Movie Interests</label>
+                        <select id="interests" name="interests">
+                            <option value="all">All genres</option>
+                            <option value="action">Action</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="drama">Drama</option>
+                            <option value="sci-fi">Sci-Fi</option>
+                            <option value="horror">Horror</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I agree to receive newsletter emails *</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Subscribe to Newsletter</button>
+                </form>
+
+                <div id="formResult" class="form-result" style="display: none;"></div>
+            </div>
+        </section>
+
+        <!-- ATTRIBUTIONS MOVED TO FOOTER (as required by specs) -->
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>CinemaFinder</h3>
+                <p>Your personal movie discovery engine</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank" aria-label="Facebook">
+                        <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
+                    </a>
+                    <a href="#" target="_blank" aria-label="Instagram">
+                        <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a href="#" target="_blank" aria-label="YouTube">
+                        <img src="images/youtube.svg" alt="YouTube" width="24" height="24">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> CinemaFinder. All rights reserved. Gary Selios</p>
+            <p>Data provided by <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a></p>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/about.js"></script>
+</body>
+
+</html>
