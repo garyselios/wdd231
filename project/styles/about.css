@@ -283,10 +283,13 @@
     border: 0;
 }
 
-.page-title {
+h2.page-title {
+    color: white !important;
     font-size: 2rem !important;
     font-weight: 700 !important;
-    color: white !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 1.5rem !important;
     letter-spacing: -0.5px !important;
+    border-bottom: none !important;
+    background-color: transparent !important;
+    text-shadow: none !important;
 }
