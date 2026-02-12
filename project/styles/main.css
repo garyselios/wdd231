@@ -152,7 +152,8 @@ header {
 #mainNav a:hover,
 #mainNav a.active {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--primary-color);
+    font-weight: 700;
 }
 
 /* ===== MAIN CONTENT ===== */
