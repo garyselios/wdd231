@@ -255,7 +255,7 @@
 .page-title {
     font-size: 2rem !important;
     font-weight: 700 !important;
-    color: var(--text-light) !important;
+    color: white !important;
     margin-bottom: 1rem !important;
     letter-spacing: -0.5px !important;
 }
